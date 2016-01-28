@@ -9,10 +9,6 @@ namespace Ch_01.Arrays_and_Strings
 {
     public class Q1
     {
-        public static void Main()
-        {
-            
-        }
 
         // Time complexity: O(min(n,c)) where c is the asciiCharsetSize
         // Space complexity: O(n + c) // n for the input string c for the dictionary

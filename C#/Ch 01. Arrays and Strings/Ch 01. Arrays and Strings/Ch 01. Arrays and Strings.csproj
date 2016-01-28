@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Main.cs" />
     <Compile Include="Q1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Q2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
