@@ -4,7 +4,7 @@ using System.Diagnostics.Contracts;
 
 namespace Ch_01.Arrays_and_Strings
 {
-    public class Q2
+    public class Q2CheckPermutation
     {
         public static bool A1(string s1, string s2, int alphabetSize)
         {

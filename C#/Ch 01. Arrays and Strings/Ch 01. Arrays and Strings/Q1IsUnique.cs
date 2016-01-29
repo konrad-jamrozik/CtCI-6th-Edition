@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ch_01.Arrays_and_Strings
 {
-    public class Q1
+    public class Q1IsUnique
     {
 
         // Time complexity: O(min(n,c)) where c is the asciiCharsetSize

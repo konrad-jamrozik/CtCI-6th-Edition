@@ -44,9 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="Q1.cs" />
+    <Compile Include="Q1IsUnique.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Q2.cs" />
+    <Compile Include="Q2CheckPermutation.cs" />
+    <Compile Include="Q3Urlify.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
