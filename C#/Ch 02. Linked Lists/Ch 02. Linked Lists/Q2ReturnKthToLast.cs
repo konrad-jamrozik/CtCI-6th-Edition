@@ -15,14 +15,14 @@ namespace Ch_02.Linked_Lists
             var front = listHead;
             var kthElement = listHead;
 
-            // for k = 1 this loop will not execute
+            // for k = 1 this loop will not execute.
             // for k = 2 this loop will execute once, moving the pointers once apart.
             // for k = l this loop will execute l-1 times, moving the pointers l-1 apart.
             foreach (int i in Enumerable.Range(1, k-1))
             {
                 if (front.Next == null)
                     // precondition violation, maybe code contracts?
-                    throw new ArgumentOutOfRangeException("The length of the of list should be >= k. Instead, it is " +i);
+                    throw new ArgumentOutOfRangeException($"The length of the of list should be >= {k}. Instead, it is {i}");
                 front = front.Next;
             }
             // assert front points to k-th element from front, with n-k elements remaining in front of it.
