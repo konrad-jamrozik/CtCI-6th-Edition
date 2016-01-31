@@ -54,7 +54,7 @@
     <Compile Include="Q3StackOfPlatesTest.cs" />
     <Compile Include="SetOfStacks.cs" />
     <Compile Include="StackExtensions.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="MyAssert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Choose>
