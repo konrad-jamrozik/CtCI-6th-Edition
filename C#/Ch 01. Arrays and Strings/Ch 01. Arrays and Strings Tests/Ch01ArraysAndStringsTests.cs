@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ch_01.Arrays_and_Strings_Tests
 {
     [TestClass]
-    public class Ch01Tests
+    public class Ch01ArraysAndStringsTests
     {
         [TestMethod]
         public void Q1IsUniqueTest()
