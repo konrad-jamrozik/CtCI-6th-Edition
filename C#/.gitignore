@@ -1,6 +1,9 @@
 # Dirs with debug artifacts
 **/obj
 
+# ReSharper
+**/*.DotSettings
+
 # http://stackoverflow.com/questions/72298/should-i-add-the-visual-studio-suo-and-user-files-to-source-control
 **/*.suo
 **/*.user
