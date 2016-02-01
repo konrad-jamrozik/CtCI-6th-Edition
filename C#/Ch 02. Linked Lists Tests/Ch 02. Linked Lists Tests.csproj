@@ -54,7 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Ch 02. Linked Lists\Ch 02. Linked Lists\Ch 02. Linked Lists.csproj">
+    <ProjectReference Include="..\Ch 02. Linked Lists\Ch 02. Linked Lists.csproj">
       <Project>{4c426dae-4489-4d16-ad28-837c7ad3ebaf}</Project>
       <Name>Ch 02. Linked Lists</Name>
     </ProjectReference>

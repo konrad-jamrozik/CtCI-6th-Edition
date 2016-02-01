@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 01. Arrays and Strings",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 01. Arrays and Strings Tests", "Ch 01. Arrays and Strings Tests\Ch 01. Arrays and Strings Tests.csproj", "{F88CDBE4-D901-4511-94E0-5175ADAC4695}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 02. Linked Lists", "..\Ch 02. Linked Lists\Ch 02. Linked Lists\Ch 02. Linked Lists.csproj", "{4C426DAE-4489-4D16-AD28-837C7AD3EBAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 02. Linked Lists", "Ch 02. Linked Lists\Ch 02. Linked Lists.csproj", "{4C426DAE-4489-4D16-AD28-837C7AD3EBAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 02. Linked Lists Tests", "..\Ch 02. Linked Lists Tests\Ch 02. Linked Lists Tests\Ch 02. Linked Lists Tests.csproj", "{99F78B09-551E-4080-84F8-889D04E127AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 02. Linked Lists Tests", "Ch 02. Linked Lists Tests\Ch 02. Linked Lists Tests.csproj", "{99F78B09-551E-4080-84F8-889D04E127AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 03. Stacks and Queues", "..\Ch 03. Stacks and Queues\Ch 03. Stacks and Queues\Ch 03. Stacks and Queues.csproj", "{3EA9B912-6EDA-48E7-8A73-C03325FBD84F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 03. Stacks and Queues", "Ch 03. Stacks and Queues\Ch 03. Stacks and Queues.csproj", "{3EA9B912-6EDA-48E7-8A73-C03325FBD84F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
