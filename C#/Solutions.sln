@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 02. Linked Lists Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 03. Stacks and Queues", "Ch 03. Stacks and Queues\Ch 03. Stacks and Queues.csproj", "{3EA9B912-6EDA-48E7-8A73-C03325FBD84F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 04. Trees and Graphs", "Ch 04. Trees and Graphs\Ch 04. Trees and Graphs.csproj", "{2F578AF5-4349-405F-B659-620744E599E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch 08. Recursion and Dynamic Programming", "Ch 08. Recursion and Dynamic Programming\Ch 08. Recursion and Dynamic Programming.csproj", "{87DD64A6-FE26-402E-B54A-99A565EF6123}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{3EA9B912-6EDA-48E7-8A73-C03325FBD84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EA9B912-6EDA-48E7-8A73-C03325FBD84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EA9B912-6EDA-48E7-8A73-C03325FBD84F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F578AF5-4349-405F-B659-620744E599E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F578AF5-4349-405F-B659-620744E599E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F578AF5-4349-405F-B659-620744E599E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F578AF5-4349-405F-B659-620744E599E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87DD64A6-FE26-402E-B54A-99A565EF6123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87DD64A6-FE26-402E-B54A-99A565EF6123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87DD64A6-FE26-402E-B54A-99A565EF6123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87DD64A6-FE26-402E-B54A-99A565EF6123}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
