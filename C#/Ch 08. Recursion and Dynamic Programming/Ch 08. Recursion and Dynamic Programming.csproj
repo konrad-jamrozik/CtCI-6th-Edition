@@ -50,7 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Q1TripleStep.cs" />
+    <Compile Include="Ch08Q1.cs" />
+    <Compile Include="Ch08Q4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Choose>
