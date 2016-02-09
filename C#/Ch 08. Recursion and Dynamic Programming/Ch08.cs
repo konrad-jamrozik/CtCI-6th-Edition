@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ch_08.Recursion_and_Dynamic_Programming
 {
     [TestClass]
-    public class Q1TripleStep
+    public class Ch08
     {
         [TestMethod]
         public void TestQ1TripleStep()
@@ -23,10 +23,10 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
 
         private void AssertTripleStep(int expected, int argument)
         {
-            Assert.AreEqual(expected, actual: TripleStep(argument));
+            Assert.AreEqual(expected, actual: Q1TripleStep(argument));
         }
 
-        public Int32 TripleStep(Int32 steps) // assumption that steps fists in n
+        public Int32 Q1TripleStep(Int32 steps) // assumption that steps fists in n
         {
             List<Int32> ways = new List<Int32> { 1, 1, 2 };
 
