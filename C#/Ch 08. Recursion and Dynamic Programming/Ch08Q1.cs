@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ch_08.Recursion_and_Dynamic_Programming
 {
     [TestClass]
-    public class Ch08
+    public class Ch08Q1
     {
         [TestMethod]
         public void TestQ1TripleStep()
