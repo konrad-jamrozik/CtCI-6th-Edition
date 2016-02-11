@@ -6,21 +6,46 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Ch_08.Recursion_and_Dynamic_Programming
 {
+    [TestClass]
     public class Ch08Q13
     {
+        [TestMethod]
+        public void TestQ13GetMaxHeight()
+        {
+            var boxes = new List<Box>();
+            Assert.AreEqual(0, GetMaxHeight(boxes));
+
+            boxes = new List<Box> {Box.Build(1), Box.Build(2), Box.Build(4,5,6) };
+            Assert.AreEqual(9, GetMaxHeight(boxes));
+
+            boxes = new List<Box> {
+                Box.Build(10, 5, 10), // skip
+                Box.Build(10, 10, 9), // take as 1.
+                Box.Build(9, 9, 8), // take as 2.
+            };
+            Assert.AreEqual(17, GetMaxHeight(boxes));
+
+            boxes = new List<Box> {
+                Box.Build(10, 5, 10), // take as 1.
+                Box.Build(10, 10, 9), // skip
+                Box.Build(9, 9, 8), // skip
+                Box.Build(10, 4, 9) // take as 2.
+            };
+            Assert.AreEqual(19, GetMaxHeight(boxes));
+        }
+
         public Int32 GetMaxHeight(List<Box> boxes)
         {
             Contract.Requires(boxes != null);
             // Contract.Requires(boxes.HaveUniqueIndexes());
 
-            if (boxes.Count == 0)
-            {
+            if (!boxes.Any())
                 return 0;
-            }
 
             var sortedBoxes = boxes.OrderByDescending(box => box.Width);
 
             Dictionary<String, Int32> memoizedMaxes = new Dictionary<String, Int32>();
+
 
             return sortedBoxes.Select(bottomBox =>
             {
@@ -33,6 +58,9 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
             Contract.Requires(sortedBoxes != null);
             Contract.Requires(memoizedMaxes != null);
             // Contract.Requires(sortedBoxes.AreSortedByWidth());
+
+            if (!sortedBoxes.Any())
+                return 0;
 
             if (!memoizedMaxes.ContainsKey(sortedBoxes.GetIndicatorString()))
             {
@@ -53,10 +81,22 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
 
     public class Box
     {
-        public Int32 Width;
-        public Int32 Height;
-        public Int32 Depth;
         public String Id;
+
+        public Int32 Width;
+        public Int32 Depth;
+        public Int32 Height;
+
+
+        public static Box Build(int dimension)
+        {
+            return new Box {Id = dimension.ToString(), Width = dimension, Depth = dimension, Height = dimension};
+        }
+
+        public static Box Build(int width, int depth, int height)
+        {
+            return new Box { Id = width.ToString() + depth + height, Width = width, Depth = depth, Height = height};
+        }
     }
 
     public static class Extensions
@@ -68,6 +108,7 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
             // assert sortedBoxes.Contains(bottomBox);
 
             return sortedBoxes
+                // This has linear complexity, could be made constant if the boxes are kept in an array and index of bottomBox is known.
                 .SkipWhile(box => box != bottomBox)
                 .Skip(1)
                 .Where(box =>
@@ -78,7 +119,8 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
 
         public static String GetIndicatorString(this IEnumerable<Box> boxes)
         {
-            // assert boxes != null;
+            Contract.Requires(boxes != null);
+            Contract.Requires(boxes.Any());
 
             return boxes.Select(box => box.Id).Join(",");
         }
