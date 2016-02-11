@@ -28,7 +28,8 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
             boxes = new List<Box> {
                 Box.Build(10, 5, 10), // take as 1.
                 Box.Build(10, 10, 9), // skip
-                Box.Build(9, 9, 8), // skip
+                Box.Build(9, 9, 4), // skip
+                Box.Build(8, 7, 3), // skip
                 Box.Build(10, 4, 9) // take as 2.
             };
             Assert.AreEqual(19, GetMaxHeight(boxes));
@@ -44,13 +45,23 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
 
             var sortedBoxes = boxes.OrderByDescending(box => box.Width);
 
+            // Instead of memoizing maxes for each possible combination of boxes, just memoize one value per one box. Such value represents
+            // the height of tallest stack having given box at the bottom.
+            // This works because when we memoize for the first time a max having given box at the bottom, it will never be overriden.
             Dictionary<String, Int32> memoizedMaxes = new Dictionary<String, Int32>();
 
-
-            return sortedBoxes.Select(bottomBox =>
+            var max = sortedBoxes.Select(bottomBox =>
             {
                 return bottomBox.Height + GetMaxHeightDFS(sortedBoxes.TakeSmallerThan(bottomBox), memoizedMaxes);
             }).Max();
+
+            // DEBUG
+            Console.Out.WriteLine("maxes keys: "+memoizedMaxes.Keys.Count);
+            foreach (var key in memoizedMaxes.Keys)
+                Console.Out.WriteLine("key = {0}", key);
+            // /DEBUG
+
+            return max;
         }
 
         private Int32 GetMaxHeightDFS(List<Box> sortedBoxes, Dictionary<String, Int32> memoizedMaxes)
@@ -73,10 +84,8 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
 
                 // Contract.Ensures(memoizedMaxes.KeyCount >= memoizedMaxes_oldValue.KeyCount);            
             }
-
             return memoizedMaxes[sortedBoxes.GetIndicatorString()];
         }
-
     }
 
     public class Box
@@ -95,7 +104,7 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
 
         public static Box Build(int width, int depth, int height)
         {
-            return new Box { Id = width.ToString() + depth + height, Width = width, Depth = depth, Height = height};
+            return new Box { Id = width.ToString() +"-" + depth + "-" + height, Width = width, Depth = depth, Height = height};
         }
     }
 
@@ -117,6 +126,8 @@ namespace Ch_08.Recursion_and_Dynamic_Programming
                 ).ToList();
         }
 
+        // Instead of this method we could just use GetHashCode() (which we might need to implement). 
+        // Then no explicit method call will be necessary when keying a map.
         public static String GetIndicatorString(this IEnumerable<Box> boxes)
         {
             Contract.Requires(boxes != null);
