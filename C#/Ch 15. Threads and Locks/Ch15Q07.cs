@@ -17,23 +17,6 @@ namespace Ch_15.Threads_and_Locks
 
         public static void Main()
         {
-            // thread 1: generate numbers
-            // thread 2: print fizz if divisible by 3
-            // thread 3: print buzz if divisible by 5
-            // thread 4: print fizzbuzz if divisible by 15
-            // Only one thread at a time can have access to console
-            // fizzbuzz has to be checked any of fizz and buzz
-
-            // Idea:
-            // Thread that generates numbers is a producer that writes to a queue consumed by fizzbuzz. After fizzbuzz processes the output, it pushes to queue read by buzz, which then passes to fizz.
-
-            // pseudocode:
-            // Start thread one generating numbers with 100 ms break. The thread will put constantly to Q1.
-            // Start fizzbuzz thread constantly reading from Q1, printing if necessary, and pushing to Q2.
-            // And so on. Last thread doesn't push anywhere.
-            // Problem: before buzz processes and prints out previous number, fizzbuzz might process and print out next number. To prevent it, processing next numbers should require more resources:
-            // fizzbuzz: 1, fizz: 2, buzz: 3, fizzbuzz: 4, fizz: 5, buzz: 6, fizzbuzz: 7, etc. Sempahore, I guess.
-
             Console.Out.WriteLine("Running main");
             
             var gn = new Thread(GenerateNumbersClass.GenerateNumbers);
