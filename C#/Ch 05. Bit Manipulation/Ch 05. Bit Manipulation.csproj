@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Ch05Intro.cs" />
+    <Compile Include="Ch05Q1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Choose>
